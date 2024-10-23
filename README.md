@@ -23,6 +23,8 @@ The aim of this analysis is to uncover trends and patterns as well as help busin
 -  Presentation Slide
 ### Zoom
   - Live Demonstration Recording
+### Githuv
+- Portfolio building
   
-
+# Database Creation and Relationship
   
