@@ -8,6 +8,7 @@ AdventureWorks is a product/sales data highlighting the various products, subcat
 This project seeks to conduct a comprehensive analysis of sales data, customer demographics, and product details to uncover complex relationships and provide sophisticated insights. These insights will facilitate the development of more effective sales strategies, refined product offerings, and targeted marketing campaigns, ultimately driving sustained growth and customer satisfaction.
 
 ## Project Objectives
+The objectives of this project is to;
 1. Identify Sales Trends: Analyze sales data to uncover trends over time, including peak periods and sales dips.
 2. Understand Customer Behavior: Examine customer demographics and purchasing 
 patterns to identify key customer segments and behaviors.
