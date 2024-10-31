@@ -117,3 +117,36 @@ df.EducationLevel.value_counts()
 df.EducationLevel.value_counts().plot(kind='bar')
 plt.title ("Customers By EducationLevel")
 ```
+# WEEK 3
+- Time series Analysis, data analysis by year
+``` python
+#Product SOld by Year
+df.groupby('Year')['ProductName'].sum()
+
+#Product SOld by Month
+df.groupby('Months')['ProductName'].count()
+```
+
+
+- Trends and patterns to discover top-performing product and region
+``` python
+#Selected Dates
+list_of_value = ['Jul-2016', 'Jan-2015', 'Feb-2015', 'Mar-2015', 'Apr-2015', 'May-2015', 'Jun-2015', 'Jul-2015', 'Aug-2015'
+df2 = df.query('Date == @list_of_value') ['ProductName'].value_counts()
+df2
+```
+Results
+ProductName
+Road-150 Red, 48 179
+Road-150 Red, 62 169
+Road-150 Red, 52 168
+Road-150 Red, 56 157
+Road-150 Red, 44 139
+...
+Touring-1000 Yellow, 54 2
+Touring-3000 Yellow, 50 1
+Mountain-500 Black, 52 1
+Women's Mountain Shorts, M 1
+Mountain-500 Black, 48 1
+- Customer demographics and purchasing patterns analysis
+- Customer Segmentation
