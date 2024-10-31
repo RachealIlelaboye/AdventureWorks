@@ -40,7 +40,7 @@ including best-sellers and underperforming items.
 # WEEK 1
 - Set up SQL database for the Adventure Works data, ensuring data integrity and 
 security.
-• Create a data star schema by creating relationship keys between tables.
+- Data star schema relationship creation using keys between tables.
 ```SQL
 -------------Creating Star Schema----
 CREATE TABLE ADW_Sales(
@@ -58,7 +58,7 @@ CREATE TABLE ADW_Sales(
 	FOREIGN KEY  (TerritoryKey) REFERENCES ADW_Territories(TerritoryKey),
 	FOREIGN KEY  (OrderDate) REFERENCES ADW_Calendar(OrderDate));
 ```
-• Perform initial data cleaning (handling missing values, duplicates, inconsistent data types)
+- Initial data cleaning (handling missing values, duplicates, inconsistent data types)
 ```SQL
 ------REPLACING NULL VALUE
 UPDATE AdventureWorks_Customers
@@ -69,7 +69,7 @@ SET Prefix = "NA" WHERE Prefix IS NULL
 SELECT ProductKey, COUNT(ProductKey) AS count 
 FROM AdventureWorks_Products GROUP BY ProductKey HAVING COUNT(ProductKey) > 1;
 ```
-• Document data star schema procedures inform of SQL scripts and data cleaning 
+• Data star schema documentation procedures inform of SQL scripts and data cleaning 
 procedures for reproducibility and transparency.
 • ER diagram 
 ![nb](https://github.com/user-attachments/assets/75cb3bbf-2567-4283-8ab8-5b03858481ba)
