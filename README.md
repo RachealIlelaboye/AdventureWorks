@@ -269,8 +269,13 @@ plt.show()
 ```
 ![sale by  country](https://github.com/user-attachments/assets/9a0e9ef9-cd69-41ea-9046-b42631345c56)
 
-
-
+# WEEK 5
+- Hypothesis testing
+  Hypothesis 1: Higher product prices will lower sales quantity
+  Hypothesis 2: Sales performancce varies significantly across territories
+  Hypothesis 3; Sales are higher for certain product categories due to seasonal trends
+- Advanced Statistical Analysis
+- Recommendations
 
 
 
