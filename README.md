@@ -228,7 +228,7 @@ ORDER BY 2 DESC
 g= df.groupby('ProductName', as_index=False)['Revenue'].sum().sort_values(by= 'Revenue', ascending=False).head(10)
 sns.barplot(data=g, x='ProductName', y='Revenue', hue='ProductName', dodge=False).set(xticklabels=[]);
 ```
-
+![pdts by revenue](https://github.com/user-attachments/assets/c745edcc-21c1-40be-a62d-96b40cb3f607)
 ``` python
 #TOP 5 Products by Number Sold
 plt.figure(figsize=(10,6))
@@ -236,7 +236,7 @@ plt.plot(df.groupby('ProductName')['ProductName'].count().sort_values(ascending=
 plt.title("TOP 5 Products by Number Sold")
 plt.show()
 ```
-
+![Least 5 pdts quantity](https://github.com/user-attachments/assets/ec737e38-021d-4cb7-946b-44e67b5a965e)
 ``` python
 #Product sold by Color
 plt.figure(figsize=(10,6))
@@ -244,19 +244,21 @@ plt.plot(df.groupby('ProductColor')['ProductColor'].count().sort_values(ascendin
 plt.title("Product Color Number Sold")
 plt.show()
 ```
+![Color by sales](https://github.com/user-attachments/assets/8d1483d1-e206-43c0-9673-e19697a83d8e)
 - Sales performance analysis across territories
 ``` python
 #REVENUE BY CONTINENT
 R= df.groupby('Continent', as_index=False)['Revenue'].sum().sort_values(by= 'Revenue', ascending=False)
 sns.barplot(data=R, x='Continent', y='Revenue', hue='Continent', dodge=False).set(xticklabels=[]);
 ```
-
+![Revenue by  continent](https://github.com/user-attachments/assets/31d6a9a7-d179-4163-901e-bcc452baefe0)
 ``` python
 #PRODUCT SALES BY CONTINENT
 df.groupby('Continent')['ProductName'].count().sort_values(ascending=False).plot(kind='bar')
 plt.title("Sales by Continent")
 plt.show()
 ```
+![sale by  continent](https://github.com/user-attachments/assets/163a7a76-1508-4f98-8b31-dbf2acd687e2)
 
 ``` python
 #SALES BY COUNTRY
@@ -265,3 +267,10 @@ plt.plot(df.groupby('Country')['ModelName'].count().sort_values(ascending=False)
 plt.title("Sales by Country")
 plt.show()
 ```
+![sale by  country](https://github.com/user-attachments/assets/9a0e9ef9-cd69-41ea-9046-b42631345c56)
+
+
+
+
+
+
