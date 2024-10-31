@@ -354,9 +354,15 @@ print(anova_result)
 ```
 # WEEK 6
 - Interactive Dashboards
+![B1](https://github.com/user-attachments/assets/434f6dae-a25f-40b5-8f9a-febc86db5908)
+![B2](https://github.com/user-attachments/assets/4fe9bfd2-7dfc-4549-add1-27749ebbbd33)
+![B3](https://github.com/user-attachments/assets/0ff5f4c4-4faa-4ef4-a416-c3a11565021f)
+![B4](https://github.com/user-attachments/assets/df107ed8-5768-4a9f-9d19-537824a1fc66)
+![B5](https://github.com/user-attachments/assets/749719b0-70f5-46eb-834f-ac562d11423a)
 
 - Presentation
 [View here][ADW Racheal Ilelaboye.pptx](https://github.com/user-attachments/files/17590770/ADW.Racheal.Ilelaboye.pptx)
+
 - Live Demonstration
 
 # RECOMMENDATIONS
