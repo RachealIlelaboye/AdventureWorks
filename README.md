@@ -72,3 +72,4 @@ FROM AdventureWorks_Products GROUP BY ProductKey HAVING COUNT(ProductKey) > 1;
 • Document data star schema procedures inform of SQL scripts and data cleaning 
 procedures for reproducibility and transparency.
 • ER diagram 
+![nb](https://github.com/user-attachments/assets/75cb3bbf-2567-4283-8ab8-5b03858481ba)
