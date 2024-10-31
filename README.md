@@ -271,9 +271,10 @@ plt.show()
 
 # WEEK 5
 - Hypothesis testing
+
   Hypothesis 1: Higher product prices will lower sales quantity
-  ```python
-  # Scatter plot of price vs sales_quantity
+```python
+ # Scatter plot of price vs sales_quantity
 plt.figure(figsize=(14, 6))
 sns.scatterplot(x='ProductPrice', y='OrderQuantity', data=data)
 plt.title('Price vs Sales Quantity')
@@ -281,7 +282,7 @@ plt.xlabel('Price')
 plt.ylabel('Sales Quantity')
 plt.show()
 ```
-
+![Scatterplot sales and qty](https://github.com/user-attachments/assets/1ef2c907-ffcc-4007-bd90-2d7b382c24e4)
 ```python
 # Calculate Pearson's correlation coefficient for Hypothesis 1
 correlation, p_value = stats.pearsonr(data['ProductPrice'], data['OrderQuantity'])
@@ -298,6 +299,7 @@ plt.xlabel('Price')
 plt.ylabel('Sales Quantity')
 plt.show()
 ```
+![Sales x territory scatter](https://github.com/user-attachments/assets/8bfec454-c3bd-4c83-97ec-29ca0e27ab3f)
 
 ``` python
 # Calculate Pearson's correlation coefficient for Hypothesis 2
@@ -313,7 +315,7 @@ sns.boxplot(x='Date', y='OrderQuantity', hue='ProductCategory', data=data)
 plt.title('Sales Distribution Across Seasons and Product Categories')
 plt.show()
 ```
-
+![sales x season](https://github.com/user-attachments/assets/79476433-28b3-401b-8986-a4ef60cca2f5)
 ```python
 # Hypothesis 3
 # Perform ANOVA using statsmodels
@@ -329,7 +331,7 @@ tukey = pairwise_tukeyhsd(endog=data['OrderQuantity'], groups=data['ProductCateg
 
 # Print Tukey's test results
 print(tukey)
-
+![Tukey HSD](https://github.com/user-attachments/assets/684ceb86-97e6-4d11-a18e-8d45602d41fe)
 # Plot the Tukey's HSD results
 tukey.plot_simultaneous()
 plt.title('Tukey HSD - Sales across Product Categories and Seasons')
@@ -337,6 +339,7 @@ plt.show()
 ```
 - Advanced Statistical Analysis
 - Recommendations
+
 
 
 
