@@ -126,7 +126,8 @@ df.groupby('Year')['ProductName'].sum()
 #Product SOld by Month
 df.groupby('Months')['ProductName'].count()
 ```
-
+![Sales by mth](https://github.com/user-attachments/assets/b89e3416-e1cd-4571-b359-12abe4fdbd26)
+![Pdts by year](https://github.com/user-attachments/assets/0743e2dc-672e-4dfe-b8a9-a9e47659942b)
 
 - Trends and patterns to discover top-performing product and region
 ``` python
@@ -149,4 +150,32 @@ Mountain-500 Black, 52 1
 Women's Mountain Shorts, M 1
 Mountain-500 Black, 48 1
 - Customer demographics and purchasing patterns analysis
+``` python
+#Gender by Sales
+df.groupby('Gender')['ProductName'].count().sort_values(ascending=False).plot(kind='bar')
+plt.title("Customers' Gender by Sales")
+plt.show(
+```
+
+```python
+#EducationLevel by Sale
+df.groupby('EducationLevel')['ProductName'].count()
+```
+
+```python
+#Marital Statusby Sales
+df.groupby('MaritalStatus')['ProductName'].count().sort_values(ascending=False).plot(kind='bar')
+plt.title("Customers' MaritalStatus by Sales")
+plt.show()
+```
+
+```python
+#Occupation by Sale
+df.groupby('Occupation')['ProductName'].count()
+```
+
+```python
+#Customers Homeownership status by Sale
+df.groupby('HomeOwner')['ProductName'].count()
+```
 - Customer Segmentation
