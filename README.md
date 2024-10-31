@@ -17,6 +17,9 @@ including best-sellers and underperforming items.
 5. Seasonal Impact: Determine the influence of seasonal trends on sales for various product categories.
 6. Optimize Sales Strategies: Provide recommendations for improving sales strategies based on data insights.
 7. Enhance Product Offerings: Suggest optimizations for product offerings based on performance and customer preferences.
+
+## Data Source 
+The datasets required for this case study were downloaded from 3signet[Official Website](https://www.3signet.com/)
    
 ## Tools Used 
 ### DB SQLITE [Download here](https://sqlitebrowser.org/dl/)
@@ -71,5 +74,9 @@ FROM AdventureWorks_Products GROUP BY ProductKey HAVING COUNT(ProductKey) > 1;
 ```
 • Data star schema documentation procedures inform of SQL scripts and data cleaning 
 procedures for reproducibility and transparency.
+
 • ER diagram 
+
 ![nb](https://github.com/user-attachments/assets/75cb3bbf-2567-4283-8ab8-5b03858481ba)
+
+# WEEK 2
