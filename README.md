@@ -221,3 +221,47 @@ group by 1
 ORDER BY 2 DESC
 ```
 
+# WEEK 4
+- Product performance and Trends Analysis
+``` python
+#TOP 10 PRODUCTS BY REVENUE
+g= df.groupby('ProductName', as_index=False)['Revenue'].sum().sort_values(by= 'Revenue', ascending=False).head(10)
+sns.barplot(data=g, x='ProductName', y='Revenue', hue='ProductName', dodge=False).set(xticklabels=[]);
+```
+
+``` python
+#TOP 5 Products by Number Sold
+plt.figure(figsize=(10,6))
+plt.plot(df.groupby('ProductName')['ProductName'].count().sort_values(ascending=False).head(5))
+plt.title("TOP 5 Products by Number Sold")
+plt.show()
+```
+
+``` python
+#Product sold by Color
+plt.figure(figsize=(10,6))
+plt.plot(df.groupby('ProductColor')['ProductColor'].count().sort_values(ascending=False))
+plt.title("Product Color Number Sold")
+plt.show()
+```
+- Sales performance analysis across territories
+``` python
+#REVENUE BY CONTINENT
+R= df.groupby('Continent', as_index=False)['Revenue'].sum().sort_values(by= 'Revenue', ascending=False)
+sns.barplot(data=R, x='Continent', y='Revenue', hue='Continent', dodge=False).set(xticklabels=[]);
+```
+
+``` python
+#PRODUCT SALES BY CONTINENT
+df.groupby('Continent')['ProductName'].count().sort_values(ascending=False).plot(kind='bar')
+plt.title("Sales by Continent")
+plt.show()
+```
+
+``` python
+#SALES BY COUNTRY
+plt.figure(figsize=(10,5))
+plt.plot(df.groupby('Country')['ModelName'].count().sort_values(ascending=False).head(10))
+plt.title("Sales by Country")
+plt.show()
+```
