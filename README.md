@@ -182,8 +182,42 @@ df.groupby('Occupation')['ProductName'].count()
 df.groupby('HomeOwner')['ProductName'].count()
 ```
 ![Sales by homeownership](https://github.com/user-attachments/assets/6b573aa1-22c9-4c65-a15c-1ed857386de2)
+
 - Customer Segmentation
- 
+```SQL
+------SEGMENTATION BASED ON GENDER------
+SELECT Gender,count(ProductName) as Product_Sales
+FROM Sales
+GROUP BY Gender
 
+------SEGMENTATION BASED ON EDUCATION LEVEL------
+SELECT EducationLevel,count(ProductName) as Product_Sales
+FROM Sales
+GROUP BY 1
+ORDER BY 2 DESC
 
+------SEGMENTATION BASED ON MARITAL STATUS------
+SELECT MaritalStatus,count(ProductName) as Product_Sales
+FROM Sales
+GROUP BY 1
+ORDER BY 2 DESC
+
+----SEGMENTATION BASED ON OCCUPATION------
+SELECT Occupation,count(ProductName) as Product_Sales
+FROM Sales
+GROUP BY 1
+ORDER BY 2 DESC
+
+----SEGMENTATION BASED ON HOME OWNWERSHIP------
+SELECT HomeOwner,count(ProductName) as Product_Sales
+FROM Sales
+GROUP BY 1
+ORDER BY 2 DESC
+
+----SEGMENTATION BASED ON NUMBER OF CHILDREN------
+SELECT TotalChildren,count(ProductName) as Product_Sales
+FROM Sales
+group by 1
+ORDER BY 2 DESC
+```
 
