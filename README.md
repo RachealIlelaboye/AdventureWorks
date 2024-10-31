@@ -361,9 +361,14 @@ print(anova_result)
 ![B5](https://github.com/user-attachments/assets/749719b0-70f5-46eb-834f-ac562d11423a)
 
 - Presentation
-[View here][ADW Racheal Ilelaboye.pptx](https://github.com/user-attachments/files/17590770/ADW.Racheal.Ilelaboye.pptx)
+[View slide here](https://github.com/user-attachments/files/17590770/ADW.Racheal.Ilelaboye.pptx)
 
 - Live Demonstration
+
+
+# PROJECT CONCLUSION
+This project provided valuable insights into the sales dataset, uncovering patterns and trends to support data-driven decision-making. The analyses covered key areas such as customer segmentation, product performance, and regional sales trends. The findings included identifying top-performing products, understanding customer behavior, and evaluating regional contributions to revenue. These insights enable targeted strategies, such as optimizing inventory, enhancing marketing efforts, and prioritizing customer segments to increase overall sales efficiency and revenue.
+Using SQL for database management, Power BI for dashboard creation, and Python for statistical analysis, we established a comprehensive approach for data analysis and visualization. This project serves as a foundational model for future data analytics initiatives and can be scaled to incorporate new data or additional analytical layers, thus providing a dynamic tool for ongoing performance monitoring.
 
 # RECOMMENDATIONS
 1. Price Strategy: Given the strong positive relationship between ProductPrice and Revenue, increasing the product price (without reducing demand too much) may lead to 
@@ -377,6 +382,4 @@ quantity could be optimized to enhance revenue without discounting too heavily.
 profitability through better pricing, bundling, or cost management.
 6. Order Quantity: The negative impact of order quantity suggests that large orders might be leading to revenue loss due to discounts. Consider revising the discount structure to 
 balance between encouraging larger orders and maintaining profitabilit
-
-
 
