@@ -272,8 +272,69 @@ plt.show()
 # WEEK 5
 - Hypothesis testing
   Hypothesis 1: Higher product prices will lower sales quantity
+  ```python
+  # Scatter plot of price vs sales_quantity
+plt.figure(figsize=(14, 6))
+sns.scatterplot(x='ProductPrice', y='OrderQuantity', data=data)
+plt.title('Price vs Sales Quantity')
+plt.xlabel('Price')
+plt.ylabel('Sales Quantity')
+plt.show()
+```
+
+```python
+# Calculate Pearson's correlation coefficient for Hypothesis 1
+correlation, p_value = stats.pearsonr(data['ProductPrice'], data['OrderQuantity'])
+print(f"Pearson's correlation: {correlation}")
+print(f"P-value: {p_value}")
+```
   Hypothesis 2: Sales performancce varies significantly across territories
+  ```python
+# Scatter plot of price vs sales_quantity
+plt.figure(figsize=(8, 6))
+sns.scatterplot(x='Country', y='OrderQuantity', data=data)
+plt.title('Price vs Sales Quantity')
+plt.xlabel('Price')
+plt.ylabel('Sales Quantity')
+plt.show()
+```
+
+``` python
+# Calculate Pearson's correlation coefficient for Hypothesis 2
+correlation, p_value = stats.pearsonr(data['OrderQuantity'], data['SalesTerritoryKey'])
+print(f"Pearson's correlation: {correlation}")
+print(f"P-value: {p_value}")
+```
   Hypothesis 3; Sales are higher for certain product categories due to seasonal trends
+```python
+# Boxplot to visualize the distribution of sales across seasons and product categories
+plt.figure(figsize=(16, 6))
+sns.boxplot(x='Date', y='OrderQuantity', hue='ProductCategory', data=data)
+plt.title('Sales Distribution Across Seasons and Product Categories')
+plt.show()
+```
+
+```python
+# Hypothesis 3
+# Perform ANOVA using statsmodels
+model = ols('OrderQuantity ~ C(ProductCategory) + C(Season) + C(ProductCategory):C(Season)', data=data).fit()
+anova_table = sm.stats.anova_lm(model, typ=2)
+
+# Print the ANOVA table
+print(anova_table)
+```
+```python
+# Perform Tukey's HSD test
+tukey = pairwise_tukeyhsd(endog=data['OrderQuantity'], groups=data['ProductCategory'] + "_" + data['Season'], alpha=0.05)
+
+# Print Tukey's test results
+print(tukey)
+
+# Plot the Tukey's HSD results
+tukey.plot_simultaneous()
+plt.title('Tukey HSD - Sales across Product Categories and Seasons')
+plt.show()
+```
 - Advanced Statistical Analysis
 - Recommendations
 
