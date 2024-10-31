@@ -38,4 +38,37 @@ including best-sellers and underperforming items.
 - Portfolio building
   
 # WEEK 1
-  
+- Set up SQL database for the Adventure Works data, ensuring data integrity and 
+security.
+• Create a data star schema by creating relationship keys between tables.
+```SQL
+-------------Creating Star Schema----
+CREATE TABLE ADW_Sales(
+	OrderDate	date,
+	StockDate	date,
+	OrderNumber	TEXT PRIMARY KEY,
+	ProductKey	INTEGER,
+	CustomerKey	INTEGER,
+	TerritoryKey	INTEGER,
+	OrderLineItem	INTEGER,
+	OrderQuantity	INTEGER,
+	FOREIGN KEY (CustomerKey) REFERENCES ADW_Customer(CustomerKey),
+	FOREIGN KEY (TerritoryKey) REFERENCES ADW_Returns (TerritoryKey),
+	FOREIGN KEY (ProductKey) REFERENCES ADW_Products(ProductKey),
+	FOREIGN KEY  (TerritoryKey) REFERENCES ADW_Territories(TerritoryKey),
+	FOREIGN KEY  (OrderDate) REFERENCES ADW_Calendar(OrderDate));
+```
+• Perform initial data cleaning (handling missing values, duplicates, inconsistent data types)
+```SQL
+------REPLACING NULL VALUE
+UPDATE AdventureWorks_Customers
+SET Prefix = "NA" WHERE Prefix IS NULL
+```
+```SQL
+---------Identifying Duplicates
+SELECT ProductKey, COUNT(ProductKey) AS count 
+FROM AdventureWorks_Products GROUP BY ProductKey HAVING COUNT(ProductKey) > 1;
+```
+• Document data star schema procedures inform of SQL scripts and data cleaning 
+procedures for reproducibility and transparency.
+• ER diagram 
