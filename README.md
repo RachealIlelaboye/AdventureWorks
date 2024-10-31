@@ -106,9 +106,8 @@ print(df.dtypes)
 df['AnnualIncome'] = df['AnnualIncome'].str.replace('$', '', regex=False)
 ```
 - Normalized Dataframe
-
-[Normalized_dataframe.csv](https://github.com/user-attachments/files/17587640/Normalized_dataframe.csv)
-[ADW.pdf](https://github.com/user-attachments/files/17587692/ADW.pdf)
+[Download csv datafrane here](https://github.com/user-attachments/files/17587640/Normalized_dataframe.csv)
+[Download pdf script here](https://github.com/user-attachments/files/17587692/ADW.pdf)
 
 - Explorative Data Analysis
 ``` python
