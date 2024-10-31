@@ -19,7 +19,7 @@ including best-sellers and underperforming items.
 7. Enhance Product Offerings: Suggest optimizations for product offerings based on performance and customer preferences.
 
 ## Data Source 
-The datasets required for this case study were downloaded from 3signet[Official Website](https://www.3signet.com/)
+The datasets required for this case study were downloaded from 3signet [Official Website](https://www.3signet.com/)
    
 ## Tools Used 
 ### DB SQLITE [Download here](https://sqlitebrowser.org/dl/)
@@ -80,3 +80,38 @@ procedures for reproducibility and transparency.
 ![nb](https://github.com/user-attachments/assets/75cb3bbf-2567-4283-8ab8-5b03858481ba)
 
 # WEEK 2
+- Database Connection with Python
+``` python
+# Connect to database 
+conn = r"C:\Users\user\Desktop\3Signet\Racheal Ilelaboye ADW Task1\Adventure Works.db" 
+connection = sqlite3.connect(conn)
+```
+- Data querying into panda dataframe
+```python
+# Read sqlite query results into a pandas DataFrame
+connection = sqlite3.connect(r"C:\Users\user\Desktop\3Signet\Racheal Ilelaboye ADW Task1\Adventure Works.db" )
+df = pd.read_sql_query("SELECT * from AdventureWorks_Customers", connection)
+```
+- Data Preprocessing and Validation
+``` python
+# Verify that SQL query is stored in the dataframe
+print(df.head())
+#To check for null values
+df.isna().sum()
+#To check table information
+df.info()
+# To confirm datatype consistency
+print(df.dtypes)
+# Removing dollar sign from the AnnualIncome column
+df['AnnualIncome'] = df['AnnualIncome'].str.replace('$', '', regex=False)
+```
+- Normalized Dataframe
+
+- Explorative Data Analysis
+``` python
+# Customers by Education Level
+df.EducationLevel.value_counts()
+# visuals
+df.EducationLevel.value_counts().plot(kind='bar')
+plt.title ("Customers By EducationLevel")
+```
