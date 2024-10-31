@@ -328,18 +328,47 @@ print(anova_table)
 ```python
 # Perform Tukey's HSD test
 tukey = pairwise_tukeyhsd(endog=data['OrderQuantity'], groups=data['ProductCategory'] + "_" + data['Season'], alpha=0.05)
-
 # Print Tukey's test results
 print(tukey)
-![Tukey HSD](https://github.com/user-attachments/assets/684ceb86-97e6-4d11-a18e-8d45602d41fe)
 # Plot the Tukey's HSD results
 tukey.plot_simultaneous()
 plt.title('Tukey HSD - Sales across Product Categories and Seasons')
 plt.show()
 ```
-- Advanced Statistical Analysis
-- Recommendations
+![Tukey HSD](https://github.com/user-attachments/assets/e878da2a-285c-4fa9-81af-adcf23f62456)
 
+- Advanced Statistical Analysis
+```python
+# Specific correlation
+correlation = stats.pearsonr(data['ProductPrice'], data['Revenue'])
+print(f'Correlation between ProductPrice and Revenue: {correlation[0]}, p-value: {correlation[1]}')
+# Simple Linear Regression
+model = ols('Revenue ~ ProductPrice + OrderQuantity', data=data).fit()
+print(model.summary())
+# Multiple Regression
+multiple_model = ols('Revenue ~ ProductPrice + OrderQuantity + C(ProductCategory)', data=data).fit()
+print(multiple_model.summary())
+# One-way ANOVA
+anova_result = sm.stats.anova_lm(model, typ=2)
+print(anova_result)
+```
+# WEEK 6
+- Interactive Dashboards
+- Presentation
+- Live Demonstration
+
+# RECOMMENDATIONS
+1. Price Strategy: Given the strong positive relationship between ProductPrice and Revenue, increasing the product price (without reducing demand too much) may lead to 
+higher revenues.
+2. Investigate Order Quantity: The negative relationship between OrderQuantity and Revenue suggests that higher sales volume may not be increasing revenue, likely due to discounts or lower-margin products being sold in higher quantities. Further analysis should be conducted on pricing and discount policies.
+3. Product Price Optimization: Since ProductPrice has a very strong impact on  Revenue, consider carefully optimizing pricing strategies. Small changes in price could 
+have a large effect on revenue.
+4. Sales Strategy for Quantity: Even though OrderQuantity is statistically significant, its effect is comparatively smaller. It might be worth exploring how increasing order 
+quantity could be optimized to enhance revenue without discounting too heavily.
+5. Product Strategy: Since "Bikes" and "Clothing" are associated with lower revenues, consider evaluating product strategies for these categories. Explore ways to improve their 
+profitability through better pricing, bundling, or cost management.
+6. Order Quantity: The negative impact of order quantity suggests that large orders might be leading to revenue loss due to discounts. Consider revising the discount structure to 
+balance between encouraging larger orders and maintaining profitabilit
 
 
 
