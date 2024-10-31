@@ -156,11 +156,13 @@ df.groupby('Gender')['ProductName'].count().sort_values(ascending=False).plot(ki
 plt.title("Customers' Gender by Sales")
 plt.show(
 ```
-
+![Sales by gender](https://github.com/user-attachments/assets/06652e77-8b43-41b7-9938-78c824f04196)
 ```python
 #EducationLevel by Sale
 df.groupby('EducationLevel')['ProductName'].count()
 ```
+![Sales by edu level](https://github.com/user-attachments/assets/3e7b32e2-6c28-4501-b49d-ef7f0f2ec811)
+
 
 ```python
 #Marital Statusby Sales
@@ -168,14 +170,20 @@ df.groupby('MaritalStatus')['ProductName'].count().sort_values(ascending=False).
 plt.title("Customers' MaritalStatus by Sales")
 plt.show()
 ```
+ ![Sales by marital](https://github.com/user-attachments/assets/87e5fe0c-1a08-4928-800c-5fa68f629de5)
 
 ```python
 #Occupation by Sale
 df.groupby('Occupation')['ProductName'].count()
 ```
-
+![Sales by occupation](https://github.com/user-attachments/assets/c8810852-3d3f-4cf8-9831-c7ce4fa44ca5)
 ```python
 #Customers Homeownership status by Sale
 df.groupby('HomeOwner')['ProductName'].count()
 ```
+![Sales by homeownership](https://github.com/user-attachments/assets/6b573aa1-22c9-4c65-a15c-1ed857386de2)
 - Customer Segmentation
+ 
+
+
+
