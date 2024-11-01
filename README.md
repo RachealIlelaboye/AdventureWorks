@@ -259,6 +259,7 @@ df.groupby('Continent')['ProductName'].count().sort_values(ascending=False).plot
 plt.title("Sales by Continent")
 plt.show()
 ```
+![sale by  continents](https://github.com/user-attachments/assets/6b3f92a7-0d87-4c94-8acc-1c4d287ac527)
 
 ``` python
 #SALES BY COUNTRY
