@@ -1,5 +1,5 @@
 # ADVENTURE WORKS
-This is a documentation of the AdventureWorks analysis.
+This is a documentation of AdventureWorks analysis.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
