@@ -2,7 +2,20 @@
 This is a documentation of the AdventureWorks analysis.
 
 ## Table of Contents
-- [Project Introduction](#project overview)
+- [Project Overview](#project-overview)
+- [Project Aim](#project-aim)
+- [Project Objectives](#[project-objective)
+- [Data Source](#data-source)
+- [Tools Used](#tools-used)
+- [WEEK 1](#week-1)
+- [WEEK 2](#week-2)
+- [WEEK 3](#week-3)
+- [WEEK 4](#week-4)
+- [WEEK 5](#week-5)
+- [WEEK 6](#week-6)
+- [PROJECT CONCLUSION](#project-conclusion)
+- [RECOMMENDATIONS](#recommendations)
+  
 # Project Overview
 AdventureWorks is a product/sales data highlighting the various products, subcategories, order etc.
 
