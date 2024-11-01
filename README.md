@@ -284,6 +284,8 @@ plt.title("Sales by Country")
 plt.show()
 ```
 ![sale by  country](https://github.com/user-attachments/assets/9a0e9ef9-cd69-41ea-9046-b42631345c56)
+[Reports][Territory Analysis Report.pdf](https://github.com/user-attachments/files/17598502/Territory.Analysis.Report.pdf)
+[Product Analysis Rpt.pdf](https://github.com/user-attachments/files/17598503/Product.Analysis.Rpt.pdf)
 
 # WEEK 5
 - Hypothesis testing
@@ -369,7 +371,7 @@ print(multiple_model.summary())
 anova_result = sm.stats.anova_lm(model, typ=2)
 print(anova_result)
 ```
-[Read Report Here]((https://github.com/user-attachments/files/17598321/Statistical.Analysis.Racheal.Ilelaboye.pdf))
+[Read Report Here][Statistical Analysis Racheal Ilelaboye.pdf](https://github.com/user-attachments/files/17598321/Statistical.Analysis.Racheal.Ilelaboye.pdf)
 
 # WEEK 6
 - Interactive Dashboards
