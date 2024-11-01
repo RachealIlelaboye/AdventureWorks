@@ -1,6 +1,8 @@
 # ADVENTURE WORKS
 This is a documentation of the AdventureWorks analysis.
 
+## Table of Contents
+- [Project Introduction](#project overview)
 # Project Overview
 AdventureWorks is a product/sales data highlighting the various products, subcategories, order etc.
 
