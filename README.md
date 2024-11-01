@@ -352,6 +352,7 @@ plt.title('Tukey HSD - Sales across Product Categories and Seasons')
 plt.show()
 ```
 ![Tukey HSD](https://github.com/user-attachments/assets/e878da2a-285c-4fa9-81af-adcf23f62456)
+[Read Report Here]((https://github.com/user-attachments/files/17598318/HYPO.pdf)
 
 - Advanced Statistical Analysis
 ```python
@@ -368,7 +369,8 @@ print(multiple_model.summary())
 anova_result = sm.stats.anova_lm(model, typ=2)
 print(anova_result)
 ```
-[Read Report Here](
+[Read Report Here]((https://github.com/user-attachments/files/17598321/Statistical.Analysis.Racheal.Ilelaboye.pdf))
+
 # WEEK 6
 - Interactive Dashboards
 ![B1](https://github.com/user-attachments/assets/434f6dae-a25f-40b5-8f9a-febc86db5908)
