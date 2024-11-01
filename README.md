@@ -368,6 +368,7 @@ print(multiple_model.summary())
 anova_result = sm.stats.anova_lm(model, typ=2)
 print(anova_result)
 ```
+[Read Report Here](
 # WEEK 6
 - Interactive Dashboards
 ![B1](https://github.com/user-attachments/assets/434f6dae-a25f-40b5-8f9a-febc86db5908)
